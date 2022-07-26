@@ -1,4 +1,3 @@
-const jwt = require("jsonwebtoken");
 const Product = require("../Model/productModel");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncError = require("../middleware/catchAsyncErrors");
