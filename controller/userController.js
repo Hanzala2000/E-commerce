@@ -63,7 +63,7 @@ let forgotPassword = catchAsyncError(async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
   const resetPasswordURL = `${req.protocol}://${req.get(
     "host"
-  )}/users/forgotPassword/${resetToken}`;
+  )}/users/resetPassword/${resetToken}`;
   const messages = `Your Reset Password URL is: \n\n ${resetPasswordURL} \n\n If you have not requested for this then please ignore.`;
 
   try {
