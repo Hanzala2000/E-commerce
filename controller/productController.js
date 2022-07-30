@@ -17,9 +17,9 @@ let getAllProducts = catchAsyncError(async (req, res) => {
     .search()
     .filter()
     .pagination(resultPerPage);
-  const getAllProduct = await apiFeature.query;
+  const products = await apiFeature.query;
   res.statusCode = 200;
-  res.send({ messsage: true, getAllProduct, productCount });
+  res.send({ messsage: true, products, productCount });
 });
 
 let getProductDetails = catchAsyncError(async (req, res, next) => {
